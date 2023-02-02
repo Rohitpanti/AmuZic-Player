@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Rubik+80s+Fade&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: linear-gradient(rgb(169, 117, 65),#0c0d0f);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: scroll;
+}
+
+.navbar{
+    font-family: 'Rubik 80s Fade', cursive;
+    position: sticky;
+    top: 0;
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    height: 60px;
+    background-color: black;
+    color: whitesmoke;
+    align-items: center;
+}
+nav ul li{
+    padding: 2px 12px;
+    
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+
+}
+.brand img{
+    width: 2rem;
+    padding: 0px 8px;
+}
+
+.container{
+    min-height: 69vh;
+    background-color: darkslategray;
+    color: aliceblue;
+    font-family: 'Audiowide', cursive;
+    display: flex;
+    margin: 15px auto;
+    width: 70%;
+    border-radius: 10px 25px;
+    padding: 35px;
+    background-image: url(images/bg.jpg);
+    background-size: cover;
+}
+
+
+
+.bottom{
+    position: sticky;
+    height:130px;
+    background-color: black;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+    flex-direction: column;
+}
+
+.icons{
+    margin-top: 15px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+}
+#myProgressBar{
+    width:80vw;
+    cursor: pointer;
+    position: absolute;
+    top:0.3rem;
+
+}
+
+
+.songItemContainer{
+    margin-top:30px ;
+}
+.songItem{
+    display: flex;
+    height: 50px;
+    background-color: azure;
+    
+    color: black;
+    margin: 12px 0px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px 20px;
+}
+.songItem img{
+    width: 75px;
+    margin: 25px 10px;
+    border-radius: 6px 15px;
+}
+
+.timestamp{
+    margin: 0px 23px;
+
+}
+.timestamp i{
+    cursor: pointer;
+}
+
+.songInfo{
+    font-family: 'Rubik 80s Fade', cursive;
+    position: absolute;
+    top:1.5rem;
+}
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.songBanner{
+    margin:3.2rem 7.5rem;
+} 
+
+.songBanner img{
+    height: 300px;
+    width: 300px;
+    border: 2px solid rgb(79, 41, 41);
+    border-radius: 150px;
+
+}
+
+@keyframes discRotate {
+    100%{
+        transform: rotate(360deg);
+}
+}
+
+@media screen and  (max-width:875px) {
+    .songBanner{
+        display: none;
+    }
+    .songItem{
+        flex-direction: row-reverse;
+    }
+}
